@@ -1,49 +1,54 @@
 import React from 'react';
-import logo from './final_logo.jpg'; 
+import nisargLogo from './nisarglogo.png'; // Your new app logo
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import './Login.css';
+import './Login.css'; // Import the CSS file
+import leafImage from '../assets/leaf2.jpg'; // Background image path
+
 function Login() {
+  const customButtonStyle = {
+    backgroundColor: '#32730e', // Set the desired color using hex code
+    border: 'none', // Remove default border for a cleaner look
+    color: 'white', // Ensure text contrast for accessibility
+  };
+
   return (
-    
-    <div className="main-container">
-    <div><nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
-        <img src={logo}  alt="nisarg logo" width="100" height="50"/>
-      </a>
-  </nav></div>
-  <div id="login-container">
-  <div className="login-form-container">
-    <div class="login_form_content">
-    <h2>Login</h2>
-    <Form>
-    <Form.Group className="mb-3 small-placeholder" controlId="formBasicName">
-        <Form.Label>Name</Form.Label>
-        <Form.Control type="text" placeholder="Enter name" />
-        <Form.Text className="text-muted">
-        </Form.Text>
-      </Form.Group>
-      <Form.Group className="mb-3 small-placeholder" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
-        </Form.Text>
-      </Form.Group>
+    <div className="login-container">
+      {/* Left side with form */}
+      <div className="login-left">
+        <div className="brand">
+          <img src={nisargLogo} alt="App Logo" width="300" /> {/* Adjust logo size as needed */}
+          <h1>Login</h1>
+          <p>Welcome to our App</p>
+          <a href="#" className="register-link">Register</a>
+        </div>
 
-      <Form.Group className="mb-3 small-placeholder" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
-      </Form.Group>
+        <Form className="login-form">
+          <Form.Group controlId="formEmail">
+            <Form.Label>Email</Form.Label>
+            <Form.Control type="email" placeholder="Enter email" />
+          </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+          <Form.Group controlId="formPassword">
+            <Form.Label>Password</Form.Label>
+            <Form.Control type="password" placeholder="Password" />
+          </Form.Group>
+
+          <Form.Group controlId="formCheckbox">
+            <Form.Check type="checkbox" label="Remember me" />
+          </Form.Group>
+
+          <Button variant="custom" style={customButtonStyle} type="submit" className="login-btn">
+            Login
+          </Button>
+        </Form>
+      </div>
+
+      {/* Right side with background image */}
+      <div className="login-right" style={{ backgroundImage: `url(${leafImage})` }}>
+      </div>
     </div>
-</div>
-  </div>
-</div>
-  )
+  );
 }
 
-export default Login
+export default Login;

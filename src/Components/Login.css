@@ -1,33 +1,92 @@
-.main-container{
-    background-image: url('https://th.bing.com/th/id/OIP.2vhihnuFEIDcQLIfa56YAwHaE0?w=293&h=191&c=7&r=0&o=5&dpr=1.3&pid=1.7');
-    background-repeat: no-repeat;
-    background-size: cover;
-
+/* Container for the entire login page */
+.login-container {
+  display: flex;
+  height: 100vh;
 }
-#login-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
-  }
 
-.login-form-container{
-    width:50%;
-    display: flex;
+/* Left side styling */
+.login-left {
+  background-color: #fff; /* Keep white background */
+  width: 50%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  padding: 40px;
+  color: #3f006a; /* Changed to match the purple shade */
+}
 
+/* Right side for the image */
+.login-right {
+  width: 90%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.login_form_content{
-    width: 100%; 
-    max-width: 400px; 
-    background-color: #f8f9fa;
-    padding: 20px; 
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(246, 220, 220, 0.1);
-    text-align: left;
+
+/* Brand styling */
+.brand {
+  text-align: center;
+  margin-bottom: 30px;
 }
-h2{
-    text-align: center;
+
+.brand img {
+  margin-bottom: 10px;
+}
+
+.brand h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #32730e; /* Lighter green for heading */
+}
+
+.brand p {
+  margin-top: -10px;
+  font-size: 1rem;
+  color: #32730e; /* Lighter green for paragraph */
+}
+
+.register-link {
+  color: #32730e; ; /* Lighter green for register link */
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+/* Login form styling */
+.login-form {
+  width: 100%;
+  max-width: 300px;
+}
+
+.login-form .form-control {
+  border-radius: 20px;
+  margin-bottom: 15px;
+  border-color: #a5d6a7; /* Green border for input fields */
+}
+
+.login-btn {
+  width: 100%;
+  color: #32730e;  /* Darker green button */
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.social-login-btn {
+  width: 100%;
+  background-color: #e2d0f2; /* Keep the social login button color */
+  color: #3f006a;
+  border-radius: 20px;
+}
+
+/* Customize the input labels */
+.login-form label {
+  font-weight: bold;
+  color: #32730e; /* Lighter green for labels */
+}
+
+/* Checkbox style */
+.form-check-label {
+  color: #32730e;  /* Lighter green for checkbox label */
 }

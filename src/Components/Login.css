@@ -1,7 +1,8 @@
-/* Container for the entire login page */
+/* Base styles for the login container */
 .login-container {
   display: flex;
   height: 100vh;
+  flex-direction: row;
 }
 
 /* Left side styling */
@@ -23,6 +24,40 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column; /* Stack the left and right sections vertically */
+  }
+
+  .login-left, .login-right {
+    width: 100%; /* Full width for both sections */
+    height: auto; /* Auto height to fit content */
+  }
+
+  .login-right {
+    background-size: contain; /* Adjust image size to fit within the container */
+    background-position: top; /* Align image to the top */
+  }
+
+  .login-left {
+    padding: 20px; /* Reduce padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .login-left {
+    font-size: 14px; /* Smaller font size for very small screens */
+    padding: 10px; /* Further reduce padding */
+  }
+
+  .login-right {
+    background-size: contain; /* Ensure the background image fits within the container */
+    background-position: center; /* Center the image */
+  }
+}
+
 
 /* Brand styling */
 .brand {
@@ -84,9 +119,16 @@
 .login-form label {
   font-weight: bold;
   color: #32730e; /* Lighter green for labels */
+  display: flex;
+  justify-content: left;
+  text-align: left;
 }
 
 /* Checkbox style */
 .form-check-label {
   color: #32730e;  /* Lighter green for checkbox label */
+}
+
+@media screen {
+  
 }

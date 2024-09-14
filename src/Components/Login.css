@@ -1,134 +1,103 @@
-/* Base styles for the login container */
 .login-container {
   display: flex;
   height: 100vh;
   flex-direction: row;
 }
-
-/* Left side styling */
 .login-left {
-  background-color: #fff; /* Keep white background */
+  background-color: #fff;
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 40px;
-  color: #3f006a; /* Changed to match the purple shade */
+  color: #3f006a; 
 }
-
-/* Right side for the image */
 .login-right {
   width: 90%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .login-container {
-    flex-direction: column; /* Stack the left and right sections vertically */
+    flex-direction: column; 
   }
-
   .login-left, .login-right {
-    width: 100%; /* Full width for both sections */
-    height: auto; /* Auto height to fit content */
+    width: 100%;
+    height: auto; 
   }
-
   .login-right {
-    background-size: contain; /* Adjust image size to fit within the container */
-    background-position: top; /* Align image to the top */
+    background-size: contain; 
+    background-position: top;
   }
-
   .login-left {
-    padding: 20px; /* Reduce padding on smaller screens */
+    padding: 20px;
   }
 }
-
 @media (max-width: 480px) {
   .login-left {
-    font-size: 14px; /* Smaller font size for very small screens */
-    padding: 10px; /* Further reduce padding */
+    font-size: 14px;
+    padding: 10px;
   }
 
   .login-right {
-    background-size: contain; /* Ensure the background image fits within the container */
-    background-position: center; /* Center the image */
+    background-size: contain;
+    background-position: center;
   }
 }
-
-
-/* Brand styling */
 .brand {
   text-align: center;
   margin-bottom: 30px;
 }
-
 .brand img {
   margin-bottom: 10px;
 }
-
 .brand h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: #32730e; /* Lighter green for heading */
+  color: #32730e; 
 }
-
 .brand p {
   margin-top: -10px;
   font-size: 1rem;
-  color: #32730e; /* Lighter green for paragraph */
+  color: #32730e;
 }
-
 .register-link {
-  color: #32730e; ; /* Lighter green for register link */
+  color: #32730e; 
   margin-top: 10px;
   display: inline-block;
   font-size: 0.9rem;
   text-decoration: underline;
 }
-
-/* Login form styling */
 .login-form {
   width: 100%;
   max-width: 300px;
 }
-
 .login-form .form-control {
   border-radius: 20px;
   margin-bottom: 15px;
-  border-color: #a5d6a7; /* Green border for input fields */
+  border-color: #a5d6a7;
 }
-
 .login-btn {
   width: 100%;
-  color: #32730e;  /* Darker green button */
+  color: #32730e;  
   border-radius: 20px;
   margin-bottom: 20px;
 }
-
 .social-login-btn {
   width: 100%;
-  background-color: #e2d0f2; /* Keep the social login button color */
+  background-color: #e2d0f2;
   color: #3f006a;
   border-radius: 20px;
 }
-
-/* Customize the input labels */
 .login-form label {
   font-weight: bold;
-  color: #32730e; /* Lighter green for labels */
+  color: #32730e;
   display: flex;
   justify-content: left;
   text-align: left;
 }
-
-/* Checkbox style */
 .form-check-label {
-  color: #32730e;  /* Lighter green for checkbox label */
-}
-
-@media screen {
-  
+  color: #32730e;
 }

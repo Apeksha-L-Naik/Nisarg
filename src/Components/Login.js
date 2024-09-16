@@ -1,8 +1,8 @@
 import React from 'react';
-import nisargLogo from './nisarglogo.png'; // Your new app logo
+import nisargLogo from '../assets/nisarglogo.png'; // Your new app logo
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import './Login.css'; // Import the CSS file
+import '../Styles/Login.css'; // Import the CSS file
 import leafImage from '../assets/leaf2.jpg'; // Background image path
 import { Link } from 'react-router-dom'; // Import Link
 
